@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--my CSS-->
+    <link rel="shortcut icon" href="imagens/cama.png"/>
+    <title>Camacafé ☕ Vivências, conveniência e convivência em hospedagens</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <!--FontawesomeIcons JavaScript-->
+    <script src="https://kit.fontawesome.com/c3f8747586.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--alerta-->
+  <header>
+      <div class="row"> 
+        <div class="col-xl-12">
+          Confira as políticas de cancelamento e ações em resposta à COVID-19.
+          <a class="info" href="#" target="_blank">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </div>
+      </div>
+  </header>
+  <!--navbar-->
+  <section id="cabecalho">
+    <nav class="navbar navbar-expand-fluid navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img id="logo" src="imagens/logo.png"/>
+        </a>
+        <form class="needs-validation" novalidate>
+          <div class="form-row">
+            <div class="input-group-append">
+              <label for="validationTooltip01"></label>
+              <small id="locationText" class="form-text"><strong>Localização</strong></small>
+              <input type="text" class="form-control" id="validationCustom03" required placeholder="Digite uma cidade">
+              <div class="invalid-feedback">
+              Escolha a cidade.
+              </div>
+            </div>
+            <div class="input-group-append">
+              <label for="validationTooltip02"></label>
+              <div class="content box-search">
+                  <label for="dates" class="label-config border-right-label w-100"></label>
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <div>
+                              <small id="datesText" class="form-text"><strong>Check-in</strong></small>
+                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Selecione data de check-in e check-out"data-input>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div>
+                              <small id="datesText" class="form-text"><strong>Check-out</strong></small>
+                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Selecione data de check-in e check-out"data-input>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="invalid-feedback">
+                Escolha as datas de check-in e check-out.
+              </div>
+            </div>
+            <div class="input-group col-xl-3">
+              <label for="validationTooltip03"><small id="numberSelect" class="form-text"><strong>Número de Hóspedes</strong></small></label>
+              
+              <select class="custom-select" id="inputGroupSelect02 validationTooltip03" required>
+                <option selected>...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <div class="input-group-append">
+                <button id="btSearch" class="btn btn-outline-info" type="button"><i class="fas fa-search"></i></button>
+              </div>            
+              <div class="invalid-feedback">
+                  Selecione a quantidade de hóspedes.
+              </div>
+            </div>
+          </div>
+        </form> 
+        <div class="limpar"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> Hospede alguém <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Ajuda<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Entrar<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><button type="button" class="btn btn-outline-info" class="rounded-pill">Cadastrar</button><span class="sr-only"></span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </section>
+  <!--filtro-->
+  <section id="filtro" class="container-fluid">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">   
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Todos')">Todos
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Apartamento')">Apartamento
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Casa')">Casa
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Chácara')">Chácara
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Estúdio')">Estúdio
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Loft')">Loft
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Quarto')">Quarto
+      </label>
+      <label class="btn btn-outline-info" onclick="filtraTipoLugar('Sítio')">Sítio
+      </label>
+    </div>
+  </section>
+        <!--cards--><!--Container-->
+  <section id="cards" class="container-fluid">
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">${card.name}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="mapa" name"mapa">
+                <style>
+                    #mapa {
+                        height: 100%;
+                    }
+                    html, body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    </style>
+                </div>
+                <div id="valorTotal" class="modal-text"><p>Total da estadia: R$ ,00</p></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-outline-info">Reservar</button>
+            </div>
+        </div>
+    </div>
+  </div>
+      
+  </section>
+        <!--Pages-->
+  <section id="paginas">
+      <nav id="pag_botao" aria-label="Page navigation example">
+          <ul class="pagination">
+          <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="index.html">Voltar ao topo</a></li>
+          </ul>
+      </nav>
+  </section>
+  <section id="mapaMenu" class="container-fluid">   
+    <div class="row">
+        <div class="col-3">
+            <p class="tituloMenu">Sobre</p>
+            <ul>
+                <li><a href="#">Nossa missão</a></li>
+                <li><a href="#">Acessibilidade</a></li>
+                <li><a href="#">Segurança</a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <p class="tituloMenu">Quer ser hóspede</p>
+            <ul>
+                <li><a href="#">Busque avaliações</a></li>
+                <li><a href="#">Conheça as facilidades do local</a></li>
+                <li><a href="#">Termo de compromisso</a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <p class="tituloMenu">Quer hospedar</p>
+            <ul>
+                <li><a href="#">Divulgue sua acomodação</a></li>
+                <li><a href="#">Ofereça uma vivência</a></li>
+                <li><a href="#">Termo de compromisso</a></li>
+            </ul>
+        </div>
+        <div class="col-3">
+            <p class="tituloMenu">FAQ</p>
+            <ul>
+                <li><a href="#">Perguntas frequentes</a></li>
+                <li><a href="#">Entre em contato</a></li>
+            </ul>
+        </div>
+    </div>
+  </section>
+
+  <footer class="container-fluid">
+      <div id="assinatura" class="row">
+        <div class="col-12">
+          <p>2020 © Desenvolvido por Thalita Colofatti - site desafio Gama Academy</p>
+        </div>   
+      </div>
+      <div id="assinatura" class="row">
+        <div class="col-12">
+          <div class="icones">
+            <a id="icone-link" href="https://github.com/thalitacolofatti/" target="_blank">
+              <i class="fab fa-github fa-1x"></i>
+            </a>
+            <a id="icone-link" href="https://linkedin.com/in/thalitaacb/" target="_blank">
+              <i class="fab fa-linkedin-in fa-1x"></i>
+            </a>
+            <a id="icone-link" href="https://instagram.com/filoactto/" target="_blank">
+              <i class="fab fa-instagram fa-1x"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  </footer>  
+
+  <script src=".js/index.js"></script>
+  <!--Bootstrap JavaScript-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+<!-- <img src="..." alt="..." class="rounded-circle">
+            <img src="..." alt="..." class="rounded-pill">-->
