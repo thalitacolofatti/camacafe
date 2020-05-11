@@ -31,30 +31,24 @@
             <img id="logo" src="imagens/logo.png"/>
         </a>
         <form class="needs-validation" novalidate>
-          <div class="form-row">
-            <div class="input-group-append">
-              <label for="validationTooltip01"></label>
-              <small id="locationText" class="form-text"><strong>Localização</strong></small>
-              <input type="text" class="form-control" id="validationCustom03" required placeholder="Digite uma cidade">
+          <div class="form-row d-flex flex-row mb-12">
+            <div class="flex-fill mb-3 input-group-prepend">
+              <input type="text" class="form-control" id="validationTooltip01" placeholder="Digite um local" required>
               <div class="invalid-feedback">
               Escolha a cidade.
               </div>
             </div>
-            <div class="input-group-append">
-              <label for="validationTooltip02"></label>
+            <div class="flex-fill mb-3 input-group-append">
               <div class="content box-search">
-                  <label for="dates" class="label-config border-right-label w-100"></label>
                   <div class="row">
                       <div class="col-lg-6">
                           <div>
-                              <small id="datesText" class="form-text"><strong>Check-in</strong></small>
-                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Selecione data de check-in e check-out"data-input>
+                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Check-in"data-input>
                           </div>
                       </div>
                       <div class="col-lg-6">
                           <div>
-                              <small id="datesText" class="form-text"><strong>Check-out</strong></small>
-                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Selecione data de check-in e check-out"data-input>
+                              <input type="date" class="form-control" name="dates" id="validationTooltip03" placeholder="Check-out"data-input>
                           </div>
                       </div>
                   </div>
@@ -63,11 +57,9 @@
                 Escolha as datas de check-in e check-out.
               </div>
             </div>
-            <div class="input-group col-xl-3">
-              <label for="validationTooltip03"><small id="numberSelect" class="form-text"><strong>Número de Hóspedes</strong></small></label>
-              
-              <select class="custom-select" id="inputGroupSelect02 validationTooltip03" required>
-                <option selected>...</option>
+            <div class="flex-fill mb-3 input-group-append">
+              <select class="custom-select" id="inputGroupSelect02 validationTooltip04" required>
+                <option selected>Número de Hóspedes</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -141,33 +133,7 @@
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">${card.name}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div id="mapa" name"mapa">
-                <style>
-                    #mapa {
-                        height: 100%;
-                    }
-                    html, body {
-                        height: 100%;
-                        margin: 0;
-                        padding: 0;
-                    }
-                    </style>
-                </div>
-                <div id="valorTotal" class="modal-text"><p>Total da estadia: R$ ,00</p></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-outline-info">Reservar</button>
-            </div>
-        </div>
+        
     </div>
   </div>
       
@@ -196,34 +162,34 @@
   <section id="mapaMenu" class="container-fluid">   
     <div class="row">
         <div class="col-3">
-            <p class="tituloMenu">Sobre</p>
             <ul>
-                <li><a href="#">Nossa missão</a></li>
-                <li><a href="#">Acessibilidade</a></li>
-                <li><a href="#">Segurança</a></li>
+              <li class="tituloMenu"><strong>Sobre</strong></li>
+              <li><a href="#">Nossa missão</a></li>
+              <li><a href="#">Acessibilidade</a></li>
+              <li><a href="#">Segurança</a></li>
             </ul>
         </div>
         <div class="col-3">
-            <p class="tituloMenu">Quer ser hóspede</p>
             <ul>
-                <li><a href="#">Busque avaliações</a></li>
-                <li><a href="#">Conheça as facilidades do local</a></li>
-                <li><a href="#">Termo de compromisso</a></li>
+              <li class="tituloMenu"><strong>Quer ser hóspede</strong></li>
+              <li><a href="#">Busque avaliações</a></li>
+              <li><a href="#">Conheça as facilidades do local</a></li>
+              <li><a href="#">Termo de compromisso</a></li>
             </ul>
         </div>
         <div class="col-3">
-            <p class="tituloMenu">Quer hospedar</p>
             <ul>
-                <li><a href="#">Divulgue sua acomodação</a></li>
-                <li><a href="#">Ofereça uma vivência</a></li>
-                <li><a href="#">Termo de compromisso</a></li>
+              <li class="tituloMenu"><strong>Quer hospedar</strong></li>
+              <li><a href="#">Divulgue sua acomodação</a></li>
+              <li><a href="#">Ofereça uma vivência</a></li>
+              <li><a href="#">Termo de compromisso</a></li>
             </ul>
         </div>
         <div class="col-3">
-            <p class="tituloMenu">FAQ</p>
             <ul>
-                <li><a href="#">Perguntas frequentes</a></li>
-                <li><a href="#">Entre em contato</a></li>
+              <li class="tituloMenu"><strong>FAQ</strong></li>
+              <li><a href="#">Perguntas frequentes</a></li>
+              <li><a href="#">Entre em contato</a></li>
             </ul>
         </div>
     </div>
@@ -262,4 +228,14 @@
 </body>
 </html>
 <!-- <img src="..." alt="..." class="rounded-circle">
-            <img src="..." alt="..." class="rounded-pill">-->
+            <img src="..." alt="..." class="rounded-pill">
+           <small id="locationText" class="form-text"><strong>Localização</strong></small>
+          <small id="numberSelect" class="form-text"><strong>Número de Hóspedes</strong></small>
+          <small id="datesText" class="form-text"><strong>Check-in</strong></small>
+          <small id="datesText" class="form-text"><strong>Check-out</strong></small>
+                        <label for="validationTooltip01"></label>
+                      <label for="dates" class="label-config border-right-label w-100"></label>
+<label for="validationTooltip02"></label>
+                         <label for="validationTooltip03"></label>
+          -->
+

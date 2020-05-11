@@ -1,5 +1,27 @@
 //calculos
 
+//datas
+const checkout = document.getElementById(validationTooltip03); // Data de hoje
+const checkin = document.getElementById(validationTooltip02); // Outra data no passado
+const diff = Math.abs(checkout.getTime() - checkin.getTime()); // Subtrai uma data pela outra
+const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); // Divide o total pelo total de milisegundos correspondentes a 1 dia. (1000 milisegundos = 1 segundo).
+
+// Mostra a diferença em dias
+console.log( days + ' dias');
+
+//localização 
+let local = document.getElementById(validationTooltip01);
+
+//numero de hospedes
+const hospedes = document.getElementById(validationTooltip01);
+
+
+
+
+
+
+
+
 
 //api mapa
 //var mapa = L.mapa('mapa').setView([51.505, -0.09], 13);
@@ -22,7 +44,7 @@ let data = [];
 //render card
 async function fetchCards() {
     return await fetch(apiUrl)
-        .then(async (r) --> await r.json())
+        .then(async (r) => await r.json())
     //let response =  await fetch(apiUrl)
     //return await response.json()
 }
@@ -63,6 +85,41 @@ async function main() {
 
 main();
 
+//calculo valor hospedagem
+function renderModal() {
+let preco = data[card.price];
+let valorFinal = days * preco;
+div.innerHTML = `
+    <div class="modal-content">  
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">${card.name}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div id="mapa" name"map">
+            <style>
+                #mapa {
+                    height: 100%;
+                }
+                html, body {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+                </style>
+        </div>
+        <div id="valorTotal" class="modal-text"><p>Total da estadia: R$ ${valorFinal},00</p></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-outline-info">Reservar</button>
+        </div>
+    </div>
+    `;
+}
+
 
 //validação
 //function validaInput(form) {
@@ -79,7 +136,7 @@ main();
 //        }, false);
 //        });
 //    }, false);
-//}
+//} ();
 
 
 
