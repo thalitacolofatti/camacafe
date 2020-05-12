@@ -7,7 +7,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    font-size: 14pt;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
@@ -19,18 +18,34 @@ header {
     align-items: center;
     width: 100%;
     margin: 0;
-    padding: 0 24px;
+    padding: 0;
     box-shadow: rgba(223, 223, 223, 0.18) 1px 1px 1px;
     z-index: 9;
     position: fixed;
     top: 0;
 }
 
+section {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecalho{
+    position: fixed;
+    margin: 0;
+    z-index: 8;
+    width: 100%;
+    padding-top: 24px;
+    background-color: #fafafa;
+    box-shadow: rgb(37,37,37, 0.07) 1px 1px 5px;
+}
+
 nav {
     width: 100%;
     margin: 0;
-    margin-top: 30px;
-    padding: 0;
+    padding-top: 30px;
+    background-color: #fafafa;
 }
 
 label{
@@ -38,23 +53,22 @@ label{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-nav#cabecalho {
-    position: fixed;
-}
+
 
 a.navbar-brand {
-    margin-left: 20px;
-    margin-right: 0;
+    padding-left: 20px;
+    margin: 0;
 }
 
 .navbar-toggler{
-    margin-right: 15px;
-    margin-left: 0;
+    padding-right: 15px;
+    margin: 0;
 }
 
 form {
     margin: 0;
     padding: 0;
+    padding-top: 10px;
 }
 
 .form-row{
@@ -68,61 +82,64 @@ form {
     clear: both;
 }
 
-#filtro{
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 0;
+#filtro {
+    padding-top: 130px;
+    padding-left: 50px;   
 }
 
-img{
+img {
     width: 100%;
+}  
+
+#logo {
     max-width: 150px;
 }
 
-.logo_social{
+.logo_social {
     width: 100%;
     max-width: 30px;
     justify-content: space-between;
 }
 
-a{  
+
+a {  
     text-decoration: unset;
     color: #181818;
 }
 
-a:hover{
+a:hover {
     text-decoration: unset;
     color: #07a389;   
 }
 
-a:visited{
+a:visited {
     text-decoration: unset;
     color: #f4276b;
 }
-a.info{
+a.info {
     padding: 10px;
     color: #ffffff;
 }
 
-a.info:hover{
+a.info:hover {
     color: #f4276b;
 }
 
-nav#pag_botao{
+nav#pag_botao {
     justify-content: center;
 }
 
-.page-link{  
+.page-link {  
     color: #07a389;
     text-decoration: unset;
 }
 
-.page-link:hover{
+.page-link:hover {
     text-decoration: unset;
     color: #181818; 
 }
 
-.page-link:visited{
+.page-link:visited {
     text-decoration: unset;
     color: #f4276b;
 }
@@ -132,9 +149,7 @@ nav#pag_botao{
     justify-content: center;
 }
 
-section {
-    justify-content: center;
-}
+
 
 .container-fluid {
     margin: 0;
@@ -146,41 +161,36 @@ section {
 #cards {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 24px;
-    margin-top: 120px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding: 0 24px;
-    animation: FromLeft 1s;
 }
 
 .card {
     margin:0;
+    padding: 0;
+    border-color: #f4276b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgb(37,37,37, 0.5) 2px 2px 5px;
+}
+
+#nome-prop{
+    height: 40px;
+    
+}
+
+#valor {
+    font-size: 10pt;
+    color: darkslategray;
 }
 
 
+img.card-img-top{
+    justify-content: center;
+    height: 15rem;
+}
 
 #paginas {
     margin-bottom: 80px;
     margin-left: 40px;
-}
-
-
-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    background-color: #07a389;
-    color: #ffffff;
-    position: fixed;
-    z-index: 9;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 ul {
@@ -207,33 +217,49 @@ li{
 }
 
 .tituloMenu {
-    color: #f4276b;
+    color: #07a389;
     justify-content: center;
 }
 
-#assinatura{
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    background-color: #07a389;
+    color: #ffffff;
+    position: fixed;
+    z-index: 9;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#assinatura {
     width: 100%;
     justify-content: center;
     padding-top: 5px;
+    padding-left: 30px;
 }
 
 .icones {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 5px;
+    padding-top: 7px;
     bottom: 0;
     right: 0;
+    padding-right: 30px;
 }
 
-a#icone-link{
-    justify-content: right;
-    padding-right: 5px;
-    margin-left: 15px;
+a#icone-link {
+    padding-right: 10px;
     color: #ffffff;
 }
 
-a#icone-link:hover{
+a#icone-link:hover {
     color: #f4276b;
 }
-

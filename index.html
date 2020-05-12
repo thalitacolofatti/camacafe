@@ -43,12 +43,12 @@
                   <div class="row">
                       <div class="col-lg-6">
                           <div>
-                              <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Check-in"data-input>
+                            <input type="date" class="form-control" name="dates" id="validationTooltip02" placeholder="Check-in"data-input>
                           </div>
                       </div>
                       <div class="col-lg-6">
                           <div>
-                              <input type="date" class="form-control" name="dates" id="validationTooltip03" placeholder="Check-out"data-input>
+                            <input type="date" class="form-control" name="dates" id="validationTooltip03" placeholder="Check-out"data-input>
                           </div>
                       </div>
                   </div>
@@ -131,12 +131,28 @@
         <!--cards--><!--Container-->
   <section id="cards" class="container-fluid">
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        
-    </div>
-  </div>
-      
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">  
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div id="valorTotal" class="modal-text">
+              <p>Total da estadia: R$ ,00</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-outline-info">Reservar</button>
+        </div>
+      </div>
+    </div> 
   </section>
         <!--Pages-->
   <section id="paginas">
@@ -155,7 +171,7 @@
               <span aria-hidden="true">&raquo;</span>
               </a>
           </li>
-          <li class="page-item"><a class="page-link" href="index.html">Voltar ao topo</a></li>
+          <li class="page-item"><a class="page-link" href="#filtro">Voltar ao topo</a></li>
           </ul>
       </nav>
   </section>
@@ -201,7 +217,7 @@
           <p>2020 © Desenvolvido por Thalita Colofatti - site desafio Gama Academy</p>
         </div>   
       </div>
-      <div id="assinatura" class="row">
+      <div id="midias" class="row">
         <div class="col-12">
           <div class="icones">
             <a id="icone-link" href="https://github.com/thalitacolofatti/" target="_blank">
